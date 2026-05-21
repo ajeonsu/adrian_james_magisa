@@ -206,7 +206,7 @@ export const education = [
   {
     school: "Central Luzon State University",
     detail: "Undergraduate — Information Technology / related program",
-    period: "Aug 2022 – Present",
+    period: "2022 – 2026",
   },
   {
     school: "Caanawan National Senior High School",
