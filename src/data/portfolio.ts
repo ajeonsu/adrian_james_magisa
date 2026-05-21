@@ -143,7 +143,7 @@ export const projects: ProjectItem[] = [
       "jsPDF",
     ],
     description:
-      "Capstone conversion from legacy PHP: nutritionist and administrator portals for BMI tracking, feeding programs, CSV/PDF reports, and optional IoT capture (ultrasonic height, load cell, RFID) via a local Node serial bridge posting to `/api/arduino-bridge`. Deployed example: capstone-growthetect.vercel.app.",
+      "Capstone full stack build for DepEd nutrition teams: automated BMI collection via Arduino/IoT (ultrasonic height, load cell, RFID) through a local Node bridge to `/api/arduino-bridge`, with manual entry as a fallback. Growth analysis, trends, and reporting dashboards; feeding program workflows; CSV/PDF exports. Nutritionist and administrator portals on Next.js 14, Supabase, and JWT role-based access—designed and implemented end to end.",
   },
   {
     name: "CrowdWorks Job Scraper",
