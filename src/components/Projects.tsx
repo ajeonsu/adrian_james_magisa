@@ -37,7 +37,7 @@ export function Projects() {
             </div>
             <div className="p-6 md:p-8">
               {project.role && (
-                <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                <p className="text-xs font-medium tracking-wide text-slate-500">
                   {project.role}
                 </p>
               )}

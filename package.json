@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "resume": "tsx scripts/generate-resume.ts",
+    "cover-letter": "tsx scripts/generate-cover-letter.ts",
+    "documents": "tsx scripts/generate-resume.ts && tsx scripts/generate-cover-letter.ts"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -16,11 +19,14 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "pdfkit": "^0.18.0",
     "tailwindcss": "^4",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

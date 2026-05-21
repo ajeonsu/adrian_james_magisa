@@ -1,11 +1,14 @@
 export const site = {
   name: "Adrian James Magisa",
-  title: "Software Engineer",
+  title: "Software Engineer / Full Stack Developer",
   location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "ajeonicpsycho@gmail.com",
   phone: "0955-402-7884",
+  portfolioUrl: "https://adrianjamesmagisa.vercel.app/",
+  resumePath: "/Adrian_James_Magisa_Resume.pdf",
+  coverLetterPath: "/Adrian_James_Magisa_Cover_Letter.pdf",
   summary:
-    "Software engineer building production web apps, backend integrations, and cloud operations. Experience spans CyberConnect’s bilingual delivery platform, EC ONE’s multi-channel CRM, AI strategy tooling with Gemini, IoT capstone work, automation scrapers, and AWS maintenance for Saga Keiba.",
+    "Full stack developer building production web apps end to end—UI, APIs, integrations, and cloud operations. Experience spans CyberConnect’s bilingual delivery platform, EC ONE’s multi-channel CRM, AI strategy tooling with Gemini, IoT capstone work, automation scrapers, and AWS maintenance for Saga Keiba.",
 };
 
 export type ExperienceItem = {
@@ -18,7 +21,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Software Engineer",
+    role: "Software Engineer / Full Stack Developer",
     company: "CyberConnect Co., Ltd.",
     companyUrl: "https://cyberconnect.co.ltd",
     period: "Dec 2024 – Present",
@@ -30,17 +33,17 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Software Developer (Backend)",
+    role: "Software Developer / Full Stack Developer",
     company: "EC ONE — Multi-channel E-commerce Platform",
     period: "Professional project",
     highlights: [
-      "Backend CRM: customer segments, email and LINE campaigns, behavior analytics, and delivery workflows.",
-      "Integrations across Email, LINE, Rakuten, Meta, and marketplace/ad platforms via Supabase Edge Functions (~97 functions).",
-      "PostgreSQL schema, RLS, cron automation, and tenant dashboards—one of my strongest shipped systems.",
+      "Full stack CRM: Next.js tenant UI plus customer segments, email and LINE campaigns, analytics, and delivery workflows.",
+      "End-to-end integrations across Email, LINE, Rakuten, Meta, and marketplace/ad platforms via Supabase Edge Functions (~97 functions).",
+      "PostgreSQL schema, RLS, cron automation, and dashboards—one of my strongest shipped systems.",
     ],
   },
   {
-    role: "Software Engineer (AWS Operations & Maintenance)",
+    role: "Software Engineer / Full Stack Developer (AWS Operations)",
     company: "Saga Keiba (佐賀競馬) — sagakeiba.net",
     companyUrl: "https://www.sagakeiba.net/",
     period: "Ongoing engagement",
@@ -74,7 +77,7 @@ export const projects: ProjectItem[] = [
   {
     name: "CyberConnect Platform",
     tagline: "Bilingual requirements & task management",
-    role: "Software Engineer @ CyberConnect",
+    role: "Software Engineer / Full Stack Developer @ CyberConnect",
     image: "/images/cyberconnect-platform.png",
     stack: [
       "Next.js 16",
@@ -91,7 +94,7 @@ export const projects: ProjectItem[] = [
   {
     name: "AIO/LLMO Strategy OSINT Analyzer",
     tagline: "AI search & LLM optimization strategy reports",
-    role: "Software Engineer @ CyberConnect",
+    role: "Software Engineer / Full Stack Developer @ CyberConnect",
     image: "/images/ai-strategy-studio.png",
     stack: [
       "Next.js API",
@@ -108,7 +111,7 @@ export const projects: ProjectItem[] = [
   {
     name: "EC ONE",
     tagline: "マルチチャネルEC統合 — orders, CRM, ads, P&L",
-    role: "Software Developer (Backend)",
+    role: "Software Developer / Full Stack Developer",
     image: "/images/ec-one.png",
     stack: [
       "Next.js 14",
@@ -122,12 +125,12 @@ export const projects: ProjectItem[] = [
       "SendGrid",
     ],
     description:
-      "B2B SaaS for Japanese and multi-channel e-commerce: unified dashboard for orders, inventory, advertising, CRM, and profit & loss. I contributed backend CRM work and channel integrations (email, LINE, Rakuten, Meta) across a large Edge Function surface and tenant RBAC.",
+      "B2B SaaS for Japanese and multi-channel e-commerce: unified dashboard for orders, inventory, advertising, CRM, and profit & loss. Full stack work on CRM features, Next.js product surfaces, and channel integrations (email, LINE, Rakuten, Meta) across Edge Functions and tenant RBAC.",
   },
   {
     name: "GROWTHetect",
     tagline: "DepEd student growth & BMI monitoring",
-    role: "Backend & database (capstone)",
+    role: "Software Engineer / Full Stack Developer (Capstone)",
     image: "/images/growthetect.png",
     stack: [
       "Next.js 14",

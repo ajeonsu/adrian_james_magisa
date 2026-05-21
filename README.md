@@ -32,6 +32,26 @@ Alternatively, deploy from the CLI:
 npx vercel
 ```
 
+## Resume PDF
+
+Generate a PDF resume from the same data as the site (includes your portfolio URL):
+
+```bash
+npm run resume
+```
+
+Output: `public/Adrian_James_Magisa_Resume.pdf` (served at `/Adrian_James_Magisa_Resume.pdf` after deploy).
+
+## Cover letter PDF
+
+```bash
+npm run cover-letter
+```
+
+Output: `public/Adrian_James_Magisa_Cover_Letter.pdf`. Regenerate both with `npm run documents`.
+
+Live site: [adrianjamesmagisa.vercel.app](https://adrianjamesmagisa.vercel.app/)
+
 ## Customize content
 
-Edit `src/data/portfolio.ts` for bio, jobs, projects, skills, education, and certifications. Replace images under `public/images/`.
+Edit `src/data/portfolio.ts` for bio, jobs, projects, skills, education, and certifications. Replace images under `public/images/`. Re-run `npm run resume` after content changes.

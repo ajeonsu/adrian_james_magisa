@@ -7,8 +7,8 @@ export function About() {
       <div className="grid gap-6 md:grid-cols-3">
         {[
           {
-            title: "Product engineering",
-            body: "CyberConnect’s bilingual delivery platform, LLMO strategy analyzer, and EC ONE CRM backends—Next.js, Supabase, Firebase, and Gemini in production.",
+            title: "Full stack product work",
+            body: "CyberConnect’s bilingual delivery platform, LLMO strategy analyzer, and EC ONE CRM—Next.js frontends, APIs, Supabase, Firebase, and Gemini in production.",
           },
           {
             title: "Integrations & automation",

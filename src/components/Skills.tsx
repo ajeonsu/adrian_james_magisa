@@ -14,7 +14,7 @@ export function Skills() {
     <Section
       id="skills"
       title="Tech stack"
-      subtitle="Proficient across modern web, mobile, Python backends, relational databases, and AWS."
+      subtitle="Proficient across modern web, mobile, Python full stack apps, relational databases, and AWS."
     >
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {groups.map((group) => (
