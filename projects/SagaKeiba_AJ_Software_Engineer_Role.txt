@@ -1,0 +1,91 @@
+Saga Keiba (佐賀競馬) Web Site — AWS Monthly Operations
+Your role as Software Engineer (AJ) — based on project work to date
+================================================================================
+
+PROJECT CONTEXT
+---------------
+- Client: Saga Keiba official website (https://www.sagakeiba.net/)
+- Environment: AWS account 876534353780, region ap-northeast-1 (Tokyo)
+- Your access: IAM user "viewer" (limited permissions; many changes require client admin)
+- Team: You work with Rapture (e.g. Masayuki Kimura, Angel Nicole); client/partner is end customer
+- Cadence agreed: server-side backup on the 1st of each month; monthly maintenance report by the 3rd business day of the following month
+
+
+WHAT YOUR ROLE IS (IN PRACTICE)
+-------------------------------
+You are acting as a **cloud / operations engineer** on this engagement more than a feature developer.
+There is little or no application code in the repo for this contract; your work is **running and explaining the AWS side** of the live site and CMS.
+
+Main responsibilities:
+
+1. AWS environment review and documentation
+   - Review EC2, EBS, ALB, Elastic IPs, snapshots, security/monitoring setup
+   - Document findings (e.g. initial assessment, risks: backups, SSH exposure, MFA, etc.)
+   - Explain architecture and issues in language suitable for non-technical clients when needed
+
+2. Backup and recovery (server-side)
+   - Design and implement monthly server backups (AWS Backup / EBS snapshots)
+   - Work through IAM blockers (viewer could not create snapshots or pass backup roles at first)
+   - Coordinate with client admin for policies: EC2, S3, AWS Backup, iam:PassRole, backup service role fixes
+   - Plan restore-test approach (temporary instance, hours estimate) for future validation
+
+3. Monitoring and incident response (first-line)
+   - Investigate CloudWatch alarms (e.g. CMS CPU high load, ALB unhealthy target)
+   - Correlate metrics (CPU, NetworkIn/Out, ALB RequestCount, UnHealthyHostCount)
+   - Distinguish short spikes vs sustained outages; tune alarm sensitivity when appropriate
+   - Hypothesize causes (traffic, WordPress cron/updates, load) and state limits of metrics-only analysis
+   - Request minimal extra access when needed: logs (S3 ALB logs, CloudWatch Logs), SSM/SSH, SNS Subscribe
+
+4. Cost awareness and client reporting support
+   - Explain EC2-related cost structure (compute, EBS, snapshots, ALB, EIP, data transfer)
+   - Separate fixed-ish vs usage-based charges; suggest cost-efficiency actions
+   - Note need for AWSBillingReadOnlyAccess / Cost Explorer for dollar breakdowns
+   - Help produce simpler client-facing cost overview vs detailed internal guide
+
+5. IAM and access coordination (technical liaison)
+   - Specify least-privilege JSON for client admin (EC2/S3/Backup, billing read-only, SNS subscribe on alert topic)
+   - Step-by-step guides for client to attach inline policies to user "viewer"
+   - Use console yourself when permissions allow; escalate when denied
+
+6. Alert notification setup
+   - Add maintenance team email to SNS topic maebashi-prod-alert-mail (same channel as client alerts)
+   - Handle sns:Subscribe permission errors and document required actions for admin
+
+7. Communication
+   - Status updates to boss (Masayuki) and team
+   - Professional, concise replies for client/partner on schedule, backups, alarms, permissions
+
+
+WHAT YOU ARE NOT PRIMARY OWNER OF (UNLESS SCOPE CHANGES)
+-------------------------------------------------------
+- WordPress/CMS feature development or theme changes
+- Deep root-cause forensics without logs/server access (you identify limits and request access)
+- Full AWS admin (account-wide changes, org SCPs, creating service roles without client)
+- Guaranteed on-call 24/7 unless contract says so (monthly ops + incident support as agreed)
+
+
+SKILLS YOU USE ON THIS PROJECT
+------------------------------
+- AWS Console: EC2, EBS, ELB/ALB, CloudWatch (metrics, alarms, dashboards), AWS Backup, SNS, IAM concepts, S3
+- Reading alarm emails and mapping to metrics/time zones (UTC vs JST)
+- Technical writing: assessments, monthly report inputs, client-friendly summaries
+- Troubleshooting under constrained IAM (viewer read + partial write after grants)
+- Basic WordPress/hosting context (cron, updates as plausible causes — verification needs logs/SSH/SSM)
+
+
+TYPICAL MONTHLY WORKFLOW (YOUR PART)
+------------------------------------
+- Confirm site health and monitoring (alarms, key metrics)
+- Verify backup jobs completed (AWS Backup / snapshots on schedule)
+- Review costs for anomalies (when billing access exists)
+- Check SSL/expiry items per monitoring guide
+- Note incidents investigated and outcomes
+- Contribute to monthly maintenance report by agreed deadline
+
+
+SUMMARY ONE-LINER
+-----------------
+As software engineer on this project, you are the **AWS operations and maintenance engineer** for Saga Keiba’s production/staging infrastructure: assess and document the environment, implement and verify backups, investigate alerts, support cost/reporting communication, and coordinate **minimum IAM permissions** with the client so ongoing monthly ops can run safely under the viewer (or equivalent) account.
+
+================================================================================
+Generated from project conversation context. Update as contract scope changes.

@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adrian James Magisa — Portfolio
 
-## Getting Started
+Static portfolio site built with **Next.js** (App Router), **TypeScript**, and **Tailwind CSS**. Configured for **static export** and deployment on **Vercel**.
 
-First, run the development server:
+## Develop locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build static site
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Output is written to the `out/` folder (`output: "export"` in `next.config.ts`).
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repository to GitHub (or GitLab/Bitbucket).
+2. Import the project in [Vercel](https://vercel.com/new).
+3. Framework preset: **Next.js** (defaults are fine).
+4. Build command: `npm run build` — Vercel serves the static export automatically for this config.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Alternatively, deploy from the CLI:
+
+```bash
+npx vercel
+```
+
+## Customize content
+
+Edit `src/data/portfolio.ts` for bio, jobs, projects, skills, education, and certifications. Replace images under `public/images/`.
