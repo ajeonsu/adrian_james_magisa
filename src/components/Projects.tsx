@@ -35,13 +35,13 @@ export function Projects() {
                 </div>
               )}
             </div>
-            <div className="p-6 md:p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               {project.role && (
                 <p className="text-xs font-medium tracking-wide text-slate-500">
                   {project.role}
                 </p>
               )}
-              <h3 className="mt-1 text-xl font-semibold text-white">
+              <h3 className="mt-1 text-lg font-semibold text-white sm:text-xl">
                 {project.name}
               </h3>
               <p className="mt-1 text-sm text-teal-300">{project.tagline}</p>

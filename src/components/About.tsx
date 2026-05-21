@@ -4,7 +4,7 @@ import { Section } from "./Section";
 export function About() {
   return (
     <Section id="about" title="About me" subtitle={site.summary}>
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[
           {
             title: "Full stack product work",
@@ -21,7 +21,7 @@ export function About() {
         ].map((card) => (
           <div
             key={card.title}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6"
           >
             <h3 className="text-lg font-semibold text-white">{card.title}</h3>
             <p className="mt-3 leading-relaxed text-slate-400">{card.body}</p>

@@ -8,8 +8,11 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1220]/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#" className="font-semibold tracking-tight text-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4">
+        <a
+          href="#"
+          className="min-w-0 shrink font-semibold tracking-tight text-white"
+        >
           {site.name.split(" ")[0]}
           <span className="text-teal-400">.</span>
         </a>
@@ -41,7 +44,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-white/10 bg-[#0b1220] px-5 py-4 md:hidden">
+        <nav className="border-t border-white/10 bg-[#0b1220] px-4 py-4 sm:px-5 md:hidden">
           <ul className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <li key={link.href}>

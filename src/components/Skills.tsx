@@ -20,7 +20,7 @@ export function Skills() {
         {groups.map((group) => (
           <div
             key={group.label}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6"
           >
             <h3 className="text-sm font-semibold uppercase tracking-wide text-teal-400">
               {group.label}

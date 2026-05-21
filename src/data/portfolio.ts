@@ -1,3 +1,5 @@
+import { kaggleBadgePath, kaggleBadges } from "./kaggle-badges";
+
 export const site = {
   name: "Adrian James Magisa",
   title: "Software Engineer / Full Stack Developer",
@@ -225,17 +227,31 @@ export const education = [
   },
 ];
 
-export const certifications = [
+export type Certification = {
+  name: string;
+  year: string;
+  detail: string;
+  /** Public credential or share URL. */
+  credentialUrl?: string;
+  /** On-site path that redirects to the credential (shareable short link). */
+  redirectPath?: string;
+};
+
+export const certifications: Certification[] = [
   {
-    name: "AWS Cloud Foundations",
+    name: "Data Visualization using Bokeh",
     year: "2025",
-    detail: "EC2, S3, IAM, serverless, and cloud security fundamentals.",
+    detail:
+      "Coursera guided project: Bokeh basics, glyphs, and geospatial mapping (completed May 2025).",
+    credentialUrl:
+      "https://www.coursera.org/share/b6f89666b65c7db35c19d22abd685fc7",
   },
-  {
-    name: "Kaggle Data Visualization",
-    year: "2025",
-    detail: "Python visualizations and insight-driven analysis.",
-  },
+  ...kaggleBadges.map((badge) => ({
+    name: `Kaggle ${badge.title}`,
+    year: badge.year,
+    detail: badge.detail,
+    redirectPath: kaggleBadgePath(badge.slug),
+  })),
 ];
 
 export const navLinks = [

@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/cert/kaggle/dataset-creator",
+      "destination": "https://www.kaggle.com/certification/badges/adrianjamesmagisaa/17",
+      "permanent": false
+    },
+    {
+      "source": "/cert/kaggle/code-forker",
+      "destination": "https://www.kaggle.com/certification/badges/adrianjamesmagisaa/38",
+      "permanent": false
+    },
+    {
+      "source": "/cert/kaggle/python-coder",
+      "destination": "https://www.kaggle.com/certification/badges/adrianjamesmagisaa/30",
+      "permanent": false
+    }
+  ]
+}

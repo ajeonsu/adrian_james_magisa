@@ -89,7 +89,7 @@ function generate() {
 
   paragraph(
     doc,
-    "I hold AWS Cloud Foundations and Kaggle Data Visualization certifications (2025) and am completing my undergraduate studies at Central Luzon State University (2022–2026). My portfolio, including project screenshots and detailed experience, is available at the link above. My resume is attached for your review.",
+    "I hold AWS Academy Graduate – Cloud Foundations (Credly, 2025), Kaggle Data Visualization and other Kaggle badges (2025), and am completing my undergraduate studies at Central Luzon State University (2022–2026). My portfolio, including project screenshots and detailed experience, is available at the link above. My resume is attached for your review.",
   );
 
   paragraph(
